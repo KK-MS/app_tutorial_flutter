@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // Import the application imports.
 import '02_simple_text_screen.dart';
 import '03_blue_screen.dart';
+import '04_icon_screen.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -25,6 +26,7 @@ class MyAppMain extends StatelessWidget {
         '/': (context) => MainMenuScreen(),
         '/simple_text': (context) => SimpleTextScreen(),
         '/03Blue': (context) => BlueScreen(),
+        '/04Icon': (context) => IconScreen(),
       },
     ));
   }
@@ -41,6 +43,7 @@ class MainMenuScreen extends StatelessWidget {
         children: <Widget>[
           btn02SimpleText(context),
           btn03BlueScreen(context),
+          btn04IconScreen(context),
        ],
       ),
     );
@@ -68,6 +71,18 @@ class MainMenuScreen extends StatelessWidget {
       },
     );
   }
+
+  Widget btn04IconScreen(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('Icon Screen'),
+      onPressed: () {
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/04Icon');
+      },
+    );
+  }
+
 }
 
 // Notes:
