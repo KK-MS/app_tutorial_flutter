@@ -10,7 +10,7 @@ class CardWidget extends StatelessWidget {
         title: Text("Simple blue Screen"),
       ),
       body: Center(
-        child: Container(
+        child: Card(
           child: Container(
             width: 200,
             height: 100,
