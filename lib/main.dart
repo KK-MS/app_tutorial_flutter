@@ -5,7 +5,7 @@ import '02_simple_text_screen.dart';
 import '03_blue_screen.dart';
 import '04_icon_screen.dart';
 import '05_card_widget.dart';
-import '05_New_Screen.dart';
+import '06_floating_btn.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -23,14 +23,15 @@ class MyAppMain extends StatelessWidget {
     print('Named Routes Demo');
     return (MaterialApp(
       title: 'Named Routes Demo',
-      initialRoute: '/',
+      initialRoute: '/06Floating',
       routes: {
         '/': (context) => MainMenuScreen(),
         '/simple_text': (context) => SimpleTextScreen(),
         '/03Blue': (context) => BlueScreen(),
         '/04Icon': (context) => IconScreen(),
         '/05Card': (context) => CardWidget(),
-        '/05Floating': (context) => SecondScreen(),
+        '/06Floating': (context) => FloatingBtnDemo(),
+//        '/07State': (context) => StateDemo(),
         //'/06Floating': (context) => FloatingWidget(),
       },
     ));
@@ -114,7 +115,7 @@ class MainMenuScreen extends StatelessWidget {
       onPressed: () {
         print("On pressed btn floating btn ");
         // Navigate to the second screen using a named route.
-        Navigator.pushNamed(context, '/05Floating');
+        Navigator.pushNamed(context, '/06Floating');
       },
     );
   }
