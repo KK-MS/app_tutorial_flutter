@@ -16,21 +16,21 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-## GIT Commands
-### …or create a new repository on the command line
-echo "# app_tutorial_flutter" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/KK-MS/app_tutorial_flutter.git
-git push -u origin master
+## GIT Commands  
+### …or create a new repository on the command line  
+echo "# app_tutorial_flutter" >> README.md  
+git init  
+git add README.md  
+git commit -m "first commit"  
+git remote add origin https://github.com/KK-MS/app_tutorial_flutter.git  
+git push -u origin master  
 
-### ……or push an existing repository from the command line
-git remote add origin https://github.com/KK-MS/app_tutorial_flutter.git
-git push -u origin master
+### ……or push an existing repository from the command line  
+git remote add origin https://github.com/KK-MS/app_tutorial_flutter.git  
+git push -u origin master  
 
-### …or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
-https://github.com/KK-MS/app_tutorial_flutter/import
+### …or import code from another repository  
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.  
+https://github.com/KK-MS/app_tutorial_flutter/import  
 
 
