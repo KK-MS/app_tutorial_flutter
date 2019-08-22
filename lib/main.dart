@@ -7,8 +7,9 @@ import '04_icon_screen.dart';
 import '05_card_widget.dart';
 import '06_floating_btn.dart';
 import '07_custome_fonts.dart';
-import '08_layouts.dart';
-import '09_listwidget.dart';
+import '08_layouts_row_column.dart';
+import '09_list_widget.dart';
+import '10_expanded_screen.dart';
 
 
 // main function
@@ -36,8 +37,9 @@ class MyAppMain extends StatelessWidget {
         '/05Card': (context) => CardWidget(),
         '/06Floating': (context) => FloatingBtnDemo(),
         '/07customefonts':(context) => CustomFonts(),
-        '/08layouts':(context) => Layouts(),
-        '/09listwidget':(context)=> List(),
+        '/08layouts':(context) => LayoutsRowColumn(),
+        '/09listwidget':(context)=> ListWidgetScreen(),
+        '/10Expanded' : (context) => ExpandedWidgetScreen(),
 
       },
     ));
@@ -61,6 +63,7 @@ class MainMenuScreen extends StatelessWidget {
           btn07CustomFonts(context),
           btn08Layouts(context),
           btn09ListWidget(context),
+          btn10Expanded(context),
 
        ],
       ),
@@ -169,7 +172,17 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-
+  Widget btn10Expanded(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('Expanded widget'),
+      onPressed: () {
+        print("On pressed btn Expanded btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/10Expanded');
+      },
+    );
+  }
 
 
 }

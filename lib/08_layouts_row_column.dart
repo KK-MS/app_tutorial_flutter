@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Layouts extends StatelessWidget {
+class LayoutsRowColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

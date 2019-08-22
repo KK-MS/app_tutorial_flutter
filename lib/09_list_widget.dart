@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class List extends StatelessWidget {
+class ListWidgetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
