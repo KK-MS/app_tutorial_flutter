@@ -27,6 +27,13 @@ class MyAppMain extends StatelessWidget {
   Widget build(BuildContext context) {
     print('Named Routes Demo');
     return (MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.red,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       title: 'Named Routes Demo',
       //initialRoute: '/06Floating',
       routes: {

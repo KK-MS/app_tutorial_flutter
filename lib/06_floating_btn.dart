@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
-class FloatingBtnDemo extends StatelessWidget {
+//class FloatingBtnDemo extends StatelessWidget
 
+//class MyHomePage extends StatefulWidget
+class FloatingBtnDemo extends StatefulWidget
+{
+  FloatingBtnDemo({Key key,}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+class _MyHomePageState extends State<FloatingBtnDemo> {
   int value = 10;
   final String strDisp = "This string is from variable. Note: no \$ used in the code";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +26,7 @@ class FloatingBtnDemo extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-           'The Text is: $strDisp. value=$value',
+            'The Text is: $strDisp. value=$value',
 //            'Current value is $value',
           ),
         ),
@@ -27,11 +37,12 @@ class FloatingBtnDemo extends StatelessWidget {
             Icons.add,
           ),
           onPressed: () {
-            value += 9;
+            setState(() {
+              value += 9;
+            });
             print("Floating btn pressed. Value = $value");
           }
-
-          ),
+      ),
     );
   }
 }
