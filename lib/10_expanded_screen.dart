@@ -18,7 +18,7 @@ class ExpandedWidgetScreen extends StatelessWidget {
           ),
           Expanded(
             child: Image(
-              image: AssetImage('images/dice1.jpg'),
+              image: AssetImage('images/dice2.jpg'),
             ),
           ),
         ],

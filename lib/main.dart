@@ -35,7 +35,7 @@ class MyAppMain extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       title: 'Named Routes Demo',
-      //initialRoute: '/06Floating',
+      initialRoute: '/', // First screen of list of Main menu
       routes: {
         '/': (context) => MainMenuScreen(),
         '/simple_text': (context) => SimpleTextScreen(),
