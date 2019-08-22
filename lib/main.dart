@@ -6,6 +6,10 @@ import '03_blue_screen.dart';
 import '04_icon_screen.dart';
 import '05_card_widget.dart';
 import '06_floating_btn.dart';
+import '07_custome_fonts.dart';
+import '08_layouts.dart';
+import '09_listwidget.dart';
+
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -23,7 +27,7 @@ class MyAppMain extends StatelessWidget {
     print('Named Routes Demo');
     return (MaterialApp(
       title: 'Named Routes Demo',
-      initialRoute: '/06Floating',
+      //initialRoute: '/06Floating',
       routes: {
         '/': (context) => MainMenuScreen(),
         '/simple_text': (context) => SimpleTextScreen(),
@@ -31,8 +35,10 @@ class MyAppMain extends StatelessWidget {
         '/04Icon': (context) => IconScreen(),
         '/05Card': (context) => CardWidget(),
         '/06Floating': (context) => FloatingBtnDemo(),
-//        '/07State': (context) => StateDemo(),
-        //'/06Floating': (context) => FloatingWidget(),
+        '/07customefonts':(context) => CustomFonts(),
+        '/08layouts':(context) => Layouts(),
+        '/09listwidget':(context)=> List(),
+
       },
     ));
   }
@@ -52,6 +58,10 @@ class MainMenuScreen extends StatelessWidget {
           btn04IconScreen(context),
           btn05CardWidget(context),
           btn05Floating(context),
+          btn07CustomFonts(context),
+          btn08Layouts(context),
+          btn09ListWidget(context),
+
        ],
       ),
     );
@@ -119,6 +129,48 @@ class MainMenuScreen extends StatelessWidget {
       },
     );
   }
+
+  Widget btn07CustomFonts(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('Customfonts'),
+      onPressed: () {
+        print("On pressed btn customfonts btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/07customefonts');
+      },
+    );
+  }
+
+
+  Widget btn08Layouts(BuildContext context)
+  {
+    //print("I am inside btn Simple text");
+
+    return RaisedButton(
+      child: Text('Layouts'),
+      onPressed: () {
+        print("On pressed btn layouts btm");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/08layouts');
+      },
+    );
+  }
+
+  Widget btn09ListWidget(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('List widget'),
+      onPressed: () {
+        print("On pressed btn listwidget btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/09listwidget');
+      },
+    );
+  }
+
+
+
 
 }
 
