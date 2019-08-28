@@ -10,6 +10,7 @@ import '07_custome_fonts.dart';
 import '08_layouts_row_column.dart';
 import '09_list_widget.dart';
 import '10_expanded_screen.dart';
+import '11_dicee_page.dart';
 
 
 // main function
@@ -47,6 +48,7 @@ class MyAppMain extends StatelessWidget {
         '/08layouts':(context) => LayoutsRowColumn(),
         '/09listwidget':(context)=> ListWidgetScreen(),
         '/10Expanded' : (context) => ExpandedWidgetScreen(),
+        '/11Dicepage' : (context)=> DicePage(),
 
       },
     ));
@@ -71,6 +73,7 @@ class MainMenuScreen extends StatelessWidget {
           btn08Layouts(context),
           btn09ListWidget(context),
           btn10Expanded(context),
+          btn11Dicepage(context),
 
        ],
       ),
@@ -190,6 +193,21 @@ class MainMenuScreen extends StatelessWidget {
       },
     );
   }
+
+  Widget btn11Dicepage(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('Dice Page with two images'),
+      onPressed: () {
+        print("On pressed btn Expanded btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/11Dicepage');
+      },
+    );
+  }
+
+
+
 
 
 }
