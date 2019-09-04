@@ -11,6 +11,7 @@ import '08_layouts_row_column.dart';
 import '09_list_widget.dart';
 import '10_expanded_screen.dart';
 import '11_dicee_page.dart';
+import '12_xylo_phone.dart';
 
 
 // main function
@@ -49,6 +50,7 @@ class MyAppMain extends StatelessWidget {
         '/09listwidget':(context)=> ListWidgetScreen(),
         '/10Expanded' : (context) => ExpandedWidgetScreen(),
         '/11Dicepage' : (context)=> DicePage(),
+        '/12xylophone': (context)=>XylophoneApp(),
 
       },
     ));
@@ -73,7 +75,8 @@ class MainMenuScreen extends StatelessWidget {
           btn08Layouts(context),
           btn09ListWidget(context),
           btn10Expanded(context),
-          btn11Dicepage(context),
+          btn11diceepage(context),
+          btn12xylophone(context),
 
        ],
       ),
@@ -194,7 +197,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn11Dicepage(BuildContext context)
+  Widget btn11diceepage(BuildContext context)
   {
     return RaisedButton(
       child: Text('Dice Page with two images'),
@@ -206,7 +209,17 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-
+  Widget btn12xylophone(BuildContext context)
+  {
+    return RaisedButton(
+      child: Text('Musical App'),
+      onPressed: () {
+        print("On pressed btn Expanded btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/12xylophone');
+      },
+    );
+  }
 
 
 

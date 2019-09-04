@@ -13,12 +13,12 @@ class ExpandedWidgetScreen extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Image(
-              image: AssetImage('images/dice1.jpg'),
+              image: AssetImage('images/pic2.jpg'),
             ),
           ),
           Expanded(
             child: Image(
-              image: AssetImage('images/dice2.jpg'),
+              image: AssetImage('images/pic1.jpg'),
             ),
           ),
         ],
