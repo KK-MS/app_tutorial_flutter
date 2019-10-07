@@ -12,7 +12,8 @@ import '09_list_widget.dart';
 import '10_expanded_screen.dart';
 import '11_dicee_page.dart';
 import '12_xylo_phone.dart';
-
+import '13_quizzler_app.dart';
+import '14_markdown_screen.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -21,7 +22,7 @@ import '12_xylo_phone.dart';
 // When navigating to the "/second" route, build the SecondScreen widget.
 void main() {
   print("Inside the main");
-  runApp(MyAppMain());
+  runApp(new MyAppMain());
 }
 
 class MyAppMain extends StatelessWidget {
@@ -40,18 +41,19 @@ class MyAppMain extends StatelessWidget {
       initialRoute: '/', // First screen of list of Main menu
       routes: {
         '/': (context) => MainMenuScreen(),
-        '/simple_text': (context) => SimpleTextScreen(),
+        '/02simple_text': (context) => SimpleTextScreen(),
         '/03Blue': (context) => BlueScreen(),
         '/04Icon': (context) => IconScreen(),
         '/05Card': (context) => CardWidget(),
         '/06Floating': (context) => FloatingBtnDemo(),
-        '/07customefonts':(context) => CustomFonts(),
-        '/08layouts':(context) => LayoutsRowColumn(),
-        '/09listwidget':(context)=> ListWidgetScreen(),
-        '/10Expanded' : (context) => ExpandedWidgetScreen(),
-        '/11Dicepage' : (context)=> DicePage(),
-        '/12xylophone': (context)=>XylophoneApp(),
-
+        '/07customefonts': (context) => CustomFonts(),
+        '/08layouts': (context) => LayoutsRowColumn(),
+        '/09listwidget': (context) => ListWidgetScreen(),
+        '/10Expanded': (context) => ExpandedWidgetScreen(),
+        '/11Dicepage': (context) => DicePage(),
+        '/12xylophone': (context) => XylophoneApp(),
+        '/13quizzeler': (context) => Quizzler(),
+        '/14markdown': (context) => FirstParameter(),
       },
     ));
   }
@@ -64,7 +66,7 @@ class MainMenuScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Tutorial Main Menu Screen'),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           btn02SimpleText(context),
           btn03BlueScreen(context),
@@ -77,15 +79,18 @@ class MainMenuScreen extends StatelessWidget {
           btn10Expanded(context),
           btn11diceepage(context),
           btn12xylophone(context),
-
-       ],
+          btn13quizzler(context),
+          btn10Expanded(context),
+          btn11diceepage(context),
+          btn12xylophone(context),
+          btn13quizzler(context),
+          btn14markdown(context),
+        ],
       ),
     );
   }
 
-
-  Widget btn02SimpleText(BuildContext context)
-  {
+  Widget btn02SimpleText(BuildContext context) {
     print("I am inside btn Simple text");
 
     return RaisedButton(
@@ -93,13 +98,12 @@ class MainMenuScreen extends StatelessWidget {
       onPressed: () {
         print("On pressed btn Simple text");
         // Navigate to the second screen using a named route.
-        Navigator.pushNamed(context, '/simple_text');
+        Navigator.pushNamed(context, '/02simple_text');
       },
     );
   }
 
-  Widget btn03BlueScreen(BuildContext context)
-  {
+  Widget btn03BlueScreen(BuildContext context) {
     return RaisedButton(
       child: Text('Blue Screen'),
       onPressed: () {
@@ -110,8 +114,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn04IconScreen(BuildContext context)
-  {
+  Widget btn04IconScreen(BuildContext context) {
     return RaisedButton(
       child: Text('Icon Screen'),
       onPressed: () {
@@ -122,8 +125,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn05CardWidget(BuildContext context)
-  {
+  Widget btn05CardWidget(BuildContext context) {
     return RaisedButton(
       child: Text('Card demo'),
       onPressed: () {
@@ -134,8 +136,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-   Widget btn05Floating(BuildContext context)
-  {
+  Widget btn05Floating(BuildContext context) {
     return RaisedButton(
       child: Text('Floating button demo'),
       onPressed: () {
@@ -146,8 +147,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn07CustomFonts(BuildContext context)
-  {
+  Widget btn07CustomFonts(BuildContext context) {
     return RaisedButton(
       child: Text('Customfonts'),
       onPressed: () {
@@ -158,9 +158,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-
-  Widget btn08Layouts(BuildContext context)
-  {
+  Widget btn08Layouts(BuildContext context) {
     //print("I am inside btn Simple text");
 
     return RaisedButton(
@@ -173,8 +171,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn09ListWidget(BuildContext context)
-  {
+  Widget btn09ListWidget(BuildContext context) {
     return RaisedButton(
       child: Text('List widget'),
       onPressed: () {
@@ -185,8 +182,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn10Expanded(BuildContext context)
-  {
+  Widget btn10Expanded(BuildContext context) {
     return RaisedButton(
       child: Text('Expanded widget'),
       onPressed: () {
@@ -197,8 +193,7 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn11diceepage(BuildContext context)
-  {
+  Widget btn11diceepage(BuildContext context) {
     return RaisedButton(
       child: Text('Dice Page with two images'),
       onPressed: () {
@@ -209,20 +204,38 @@ class MainMenuScreen extends StatelessWidget {
     );
   }
 
-  Widget btn12xylophone(BuildContext context)
-  {
+  Widget btn12xylophone(BuildContext context) {
     return RaisedButton(
       child: Text('Musical App'),
       onPressed: () {
-        print("On pressed btn Expanded btn ");
+        print("On pressed btn Musical App btn ");
         // Navigate to the second screen using a named route.
         Navigator.pushNamed(context, '/12xylophone');
       },
     );
   }
 
+  Widget btn13quizzler(BuildContext context) {
+    return RaisedButton(
+      child: Text('Quiz'),
+      onPressed: () {
+        print("On pressed btn quiz btn ");
+        // Navigate to the second screen using a named route.
+        Navigator.pushNamed(context, '/13quizzeler');
+      },
+    );
+  }
+}
 
-
+Widget btn14markdown(BuildContext context) {
+  return RaisedButton(
+    child: Text('Evaluation Sheet'),
+    onPressed: () {
+      print("On pressed btn EvaluationSheet btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/14markdown');
+    },
+  );
 }
 
 // Notes:
