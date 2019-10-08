@@ -233,6 +233,13 @@
             </list>
           </value>
         </entry>
+        <entry key="web_socket_channel">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-1.0.15/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="xml">
           <value>
             <list>
@@ -273,6 +280,7 @@
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib" />
+      <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-1.0.15/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/xml-3.5.0/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/packages/flutter/lib" />

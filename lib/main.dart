@@ -14,6 +14,8 @@ import '11_dicee_page.dart';
 import '12_xylo_phone.dart';
 import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
+import '15_web_socket.dart';
+
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -54,6 +56,7 @@ class MyAppMain extends StatelessWidget {
         '/12xylophone': (context) => XylophoneApp(),
         '/13quizzeler': (context) => Quizzler(),
         '/14markdown': (context) => FirstParameter(),
+        '/15websocket':(context)=> WebSocket()
       },
     ));
   }
@@ -80,11 +83,9 @@ class MainMenuScreen extends StatelessWidget {
           btn11diceepage(context),
           btn12xylophone(context),
           btn13quizzler(context),
-          btn10Expanded(context),
-          btn11diceepage(context),
-          btn12xylophone(context),
-          btn13quizzler(context),
           btn14markdown(context),
+          btn15Websocket(context),
+
         ],
       ),
     );
@@ -234,6 +235,17 @@ Widget btn14markdown(BuildContext context) {
       print("On pressed btn EvaluationSheet btn ");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/14markdown');
+    },
+  );
+}
+
+Widget btn15Websocket(BuildContext context) {
+  return RaisedButton(
+    child: Text('Web Socket'),
+    onPressed: () {
+      print("On pressed btn websocket btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/15websocket');
     },
   );
 }

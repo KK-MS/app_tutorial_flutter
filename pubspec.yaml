@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   audioplayers: ^0.10.0
   rflutter_alert: ^1.0.3
+  web_socket_channel: ^1.0.15
 
 dev_dependencies:
   flutter_markdown: ^0.2.0
