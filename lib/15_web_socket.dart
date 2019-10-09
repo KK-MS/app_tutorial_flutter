@@ -10,6 +10,8 @@ class WebSocket extends StatelessWidget {
     return  MaterialApp(
       home: MyHomePage(
         channel: IOWebSocketChannel.connect("ws://echo.Websocket.org"),
+        //  test server provided by websocket.org
+        //The server sends back the same message you send to it.
       ),
     );
   }

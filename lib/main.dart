@@ -15,6 +15,7 @@ import '12_xylo_phone.dart';
 import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
+import '16_hello_world_server.dart';
 
 
 // main function
@@ -56,7 +57,8 @@ class MyAppMain extends StatelessWidget {
         '/12xylophone': (context) => XylophoneApp(),
         '/13quizzeler': (context) => Quizzler(),
         '/14markdown': (context) => FirstParameter(),
-        '/15websocket':(context)=> WebSocket()
+        '/15websocket':(context)=> WebSocket(),
+        '/16server': (context)=> Server(),
       },
     ));
   }
@@ -85,6 +87,7 @@ class MainMenuScreen extends StatelessWidget {
           btn13quizzler(context),
           btn14markdown(context),
           btn15Websocket(context),
+          btn16helloworldserver(context),
 
         ],
       ),
@@ -246,6 +249,17 @@ Widget btn15Websocket(BuildContext context) {
       print("On pressed btn websocket btn ");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/15websocket');
+    },
+  );
+}
+
+Widget btn16helloworldserver(BuildContext context) {
+  return RaisedButton(
+    child: Text('Hello world Server'),
+    onPressed: () {
+      print("On pressed btn server btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/16server');
     },
   );
 }

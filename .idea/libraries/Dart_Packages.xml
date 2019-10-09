@@ -93,6 +93,13 @@
             </list>
           </value>
         </entry>
+        <entry key="http_server">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_server-0.9.8+3/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="image">
           <value>
             <list>
@@ -118,6 +125,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mime">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-0.9.6+3/lib" />
             </list>
           </value>
         </entry>
@@ -261,10 +275,12 @@
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_markdown-0.2.0/lib" />
+      <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_server-0.9.8+3/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.4/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.5/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.7/lib" />
+      <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/mime-0.9.6+3/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.4/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-0.5.0+1/lib" />
       <root url="file://$PROJECT_DIR$/../src/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.8.0+1/lib" />
