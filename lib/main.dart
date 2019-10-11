@@ -16,6 +16,7 @@ import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
 import '16_hello_world_server.dart';
+import '17_client_server.dart';
 
 
 // main function
@@ -59,6 +60,7 @@ class MyAppMain extends StatelessWidget {
         '/14markdown': (context) => FirstParameter(),
         '/15websocket':(context)=> WebSocket(),
         '/16server': (context)=> Server(),
+        '/17serverclient': (context)=> ServerClient(),
       },
     ));
   }
@@ -88,6 +90,7 @@ class MainMenuScreen extends StatelessWidget {
           btn14markdown(context),
           btn15Websocket(context),
           btn16helloworldserver(context),
+          btn17clientdserver(context),
 
         ],
       ),
@@ -263,6 +266,18 @@ Widget btn16helloworldserver(BuildContext context) {
     },
   );
 }
+
+Widget btn17clientdserver(BuildContext context) {
+  return RaisedButton(
+    child: Text('client Server'),
+    onPressed: () {
+      print("On pressed btn client server btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/17serverclient');
+    },
+  );
+}
+
 
 // Notes:
 // void main() => runApp(MyApp());
