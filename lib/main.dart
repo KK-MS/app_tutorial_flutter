@@ -16,7 +16,8 @@ import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
 import '16_hello_world_server.dart';
-import '17_client_server.dart';
+import '17_hello_client_server.dart';
+import '18_multilanguage.dart';
 
 
 // main function
@@ -44,7 +45,7 @@ class MyAppMain extends StatelessWidget {
       title: 'Named Routes Demo',
       initialRoute: '/', // First screen of list of Main menu
       routes: {
-        '/': (context) => MainMenuScreen(),
+        '/': (context) => Center(child: MainMenuScreen()),
         '/02simple_text': (context) => SimpleTextScreen(),
         '/03Blue': (context) => BlueScreen(),
         '/04Icon': (context) => IconScreen(),
@@ -61,6 +62,7 @@ class MyAppMain extends StatelessWidget {
         '/15websocket':(context)=> WebSocket(),
         '/16server': (context)=> Server(),
         '/17serverclient': (context)=> ServerClient(),
+        '/18multilanguage': (context)=> Multilang(),
       },
     ));
   }
@@ -91,6 +93,7 @@ class MainMenuScreen extends StatelessWidget {
           btn15Websocket(context),
           btn16helloworldserver(context),
           btn17clientdserver(context),
+          btn18multilanguage(context),
 
         ],
       ),
@@ -278,6 +281,17 @@ Widget btn17clientdserver(BuildContext context) {
   );
 }
 
+
+Widget btn18multilanguage(BuildContext context) {
+  return RaisedButton(
+    child: Text('Translator'),
+    onPressed: () {
+      print("On pressed Translator btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/18multilanguage');
+    },
+  );
+}
 
 // Notes:
 // void main() => runApp(MyApp());
