@@ -1,39 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/io.dart';
 
 
 
-class WebSocket extends StatelessWidget {
+class DartWebSocket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      home: MyHomePage(
-//        channel: IOWebSocketChannel.connect("ws://echo.Websocket.org"),
-        //  test server provided by websocket.org
-        //The server sends back the same message you send to it.
-      ),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-//  final WebSocketChannel channel;
-//  MyHomePage({@required this.channel});
-
   @override
   _MyHomePageState createState() {
     return  _MyHomePageState();
   }
 }
 
+IOWebSocketChannel channel;
+
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController editingController = TextEditingController();
-  IOWebSocketChannel channel;
   @override
   Widget build(BuildContext context) {
-    //channel = IOWebSocketChannel.connect("ws://echo.Websocket.org");
     channel = IOWebSocketChannel.connect("ws://10.5.11.88:7777");
+    //channel = IOWebSocketChannel.connect("wss://echo.websocket.org/");
 
 
     return  Scaffold(
@@ -55,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //stream: widget.channel.stream,
               stream: channel.stream,
               builder: (context, snapshot) {
+                print("StreamBuilding: receiving: ${snapshot.data}");
                 return Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Text(snapshot.hasData ? 'SERVER SENT->${snapshot.data}' : ''),
@@ -76,9 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _sendMyMessage(){
+    String str1 = "shared_init:stream_en&false&max_color&255&";
+
     if (editingController.text.isNotEmpty){
       //widget.channel.sink.add(editingController.text);
-      channel.sink.add(editingController.text);
+      //print("Sending: ${editingController.text}");
+      //channel.sink.add(editingController.text);
+      print("Sending: $str1");
+      channel.sink.add(str1);
     }
 
     @override
