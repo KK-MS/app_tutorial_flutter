@@ -18,6 +18,9 @@ import '15_web_socket.dart';
 import '16_hello_world_server.dart';
 import '17_hello_client_server.dart';
 import '18_multilanguage.dart';
+import '19_socket_connection.dart';
+
+
 
 
 // main function
@@ -26,9 +29,13 @@ import '18_multilanguage.dart';
 // When navigating to the "/" route, build the FirstScreen widget.
 // When navigating to the "/second" route, build the SecondScreen widget.
 void main() {
+
+
   print("Inside the main");
   runApp(new MyAppMain());
+
 }
+
 
 class MyAppMain extends StatelessWidget {
   @override
@@ -63,6 +70,7 @@ class MyAppMain extends StatelessWidget {
         '/16server': (context)=> Server(),
         '/17serverclient': (context)=> ServerClient(),
         '/18multilanguage': (context)=> Multilang(),
+        '/19socketconnection':(context)=> SocketScreen(),
       },
     ));
   }
@@ -94,6 +102,7 @@ class MainMenuScreen extends StatelessWidget {
           btn16helloworldserver(context),
           btn17clientdserver(context),
           btn18multilanguage(context),
+          btn19socketconnection(context),
 
         ],
       ),
@@ -289,6 +298,17 @@ Widget btn18multilanguage(BuildContext context) {
       print("On pressed Translator btn ");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/18multilanguage');
+    },
+  );
+}
+
+Widget btn19socketconnection(BuildContext context) {
+  return RaisedButton(
+    child: Text('SocketDemo'),
+    onPressed: () {
+      print("On pressed SocketDemo btn ");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/19socketconnection');
     },
   );
 }
