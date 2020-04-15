@@ -16,11 +16,9 @@ import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
 import '16_hello_world_server.dart';
-import '17_hello_client_server.dart';
+//import '17_hello_client_server.dart';
 import '18_multilanguage.dart';
-import '19_socket_connection.dart';
-
-
+import '19_DartWebSocket.dart';
 
 
 // main function
@@ -29,13 +27,9 @@ import '19_socket_connection.dart';
 // When navigating to the "/" route, build the FirstScreen widget.
 // When navigating to the "/second" route, build the SecondScreen widget.
 void main() {
-
-
   print("Inside the main");
   runApp(new MyAppMain());
-
 }
-
 
 class MyAppMain extends StatelessWidget {
   @override
@@ -68,9 +62,9 @@ class MyAppMain extends StatelessWidget {
         '/14markdown': (context) => FirstParameter(),
         '/15websocket':(context)=> WebSocket(),
         '/16server': (context)=> Server(),
-        '/17serverclient': (context)=> ServerClient(),
+//        '/17serverclient': (context)=> ServerClient(),
         '/18multilanguage': (context)=> Multilang(),
-        '/19socketconnection':(context)=> SocketScreen(),
+        '/19dartwebsocket': (context)=> DartWebSocket(),
       },
     ));
   }
@@ -85,6 +79,7 @@ class MainMenuScreen extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          btn19dartwebsocket(context),
           btn02SimpleText(context),
           btn03BlueScreen(context),
           btn04IconScreen(context),
@@ -102,8 +97,6 @@ class MainMenuScreen extends StatelessWidget {
           btn16helloworldserver(context),
           btn17clientdserver(context),
           btn18multilanguage(context),
-          btn19socketconnection(context),
-
         ],
       ),
     );
@@ -302,17 +295,16 @@ Widget btn18multilanguage(BuildContext context) {
   );
 }
 
-Widget btn19socketconnection(BuildContext context) {
+Widget btn19dartwebsocket(BuildContext context) {
   return RaisedButton(
-    child: Text('SocketDemo'),
+    child: Text('DartWebSocket'),
     onPressed: () {
-      print("On pressed SocketDemo btn ");
+      print("On pressed Translator btn ");
       // Navigate to the second screen using a named route.
-      Navigator.pushNamed(context, '/19socketconnection');
+      Navigator.pushNamed(context, '/19dartwebsocket');
     },
   );
 }
-
 // Notes:
 // void main() => runApp(MyApp());
 // OR other way to represent
