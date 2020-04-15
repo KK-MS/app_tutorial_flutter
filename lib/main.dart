@@ -299,7 +299,7 @@ Widget btn19dartwebsocket(BuildContext context) {
   return RaisedButton(
     child: Text('DartWebSocket'),
     onPressed: () {
-      print("On pressed Translator btn ");
+      print("On pressed Dartwebsocket btn ");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/19dartwebsocket');
     },
