@@ -30,7 +30,8 @@ Widget build(BuildContext context) {
 class MyHomePage extends StatefulWidget {
   final String title;
   final Socket channel;
-// provide text for title
+
+// provide text for title as method was called null
   MyHomePage({Key key, @required this.title='TCP Socket Demo', @required this.channel})
       : super(key: key);
 
