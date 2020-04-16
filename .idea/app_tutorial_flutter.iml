@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/recorder_app_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/recorder_app_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/recorder_app_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/recording_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/recording_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/recording_app/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

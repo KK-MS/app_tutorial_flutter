@@ -65,9 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.symmetric(vertical: 24.0),
                   child: Row(
                     children: <Widget>[
-                      Text(snapshot.hasData
-                          ? '${String.fromCharCodes(snapshot.data)}'
-                          : ''),
+                      Text(snapshot.hasData ? '${String.fromCharCodes(
+                          snapshot.data)}' : ''),
                     ],
                   ),
                 );

@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 class Multilang extends StatelessWidget {
   // This Widget is the root of our App
+
   @override
   Widget build(BuildContext context) {
     var data = EasyLocalizationProvider.of(context).data;
@@ -37,12 +38,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+
 
   @override
   Widget build(BuildContext context) {

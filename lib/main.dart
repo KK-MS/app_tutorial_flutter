@@ -16,10 +16,10 @@ import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
 import '16_hello_world_server.dart';
-//import '17_hello_client_server.dart';
+import '17_hello_client_server.dart';
 import '18_multilanguage.dart';
 import '19_DartWebSocket.dart';
-
+import '20_socket_connection.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -60,11 +60,12 @@ class MyAppMain extends StatelessWidget {
         '/12xylophone': (context) => XylophoneApp(),
         '/13quizzeler': (context) => Quizzler(),
         '/14markdown': (context) => FirstParameter(),
-        '/15websocket':(context)=> WebSocket(),
-        '/16server': (context)=> Server(),
-//        '/17serverclient': (context)=> ServerClient(),
-        '/18multilanguage': (context)=> Multilang(),
-        '/19dartwebsocket': (context)=> DartWebSocket(),
+        '/15websocket': (context) => WebSocket(),
+        '/16server': (context) => Server(),
+        '/17serverclient': (context) => ServerClient(),
+        '/18multilanguage': (context) => Multilang(),
+        '/19dartwebsocket': (context) => DartWebSocket(),
+        '/20socketconnection': (context) => SocketScreen(),
       },
     ));
   }
@@ -79,7 +80,6 @@ class MainMenuScreen extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          btn19dartwebsocket(context),
           btn02SimpleText(context),
           btn03BlueScreen(context),
           btn04IconScreen(context),
@@ -97,6 +97,8 @@ class MainMenuScreen extends StatelessWidget {
           btn16helloworldserver(context),
           btn17clientdserver(context),
           btn18multilanguage(context),
+          btn19dartwebsocket(context),
+          btn20socketconnection(context),
         ],
       ),
     );
@@ -283,7 +285,6 @@ Widget btn17clientdserver(BuildContext context) {
   );
 }
 
-
 Widget btn18multilanguage(BuildContext context) {
   return RaisedButton(
     child: Text('Translator'),
@@ -305,6 +306,20 @@ Widget btn19dartwebsocket(BuildContext context) {
     },
   );
 }
+
+Widget btn20socketconnection(BuildContext context) {
+  print("I am inside btn Socket");
+
+  return RaisedButton(
+    child: Text('Simple TCP Socket'),
+    onPressed: () {
+      print("On pressed btn socket connection");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/20socketconnection');
+    },
+  );
+}
+
 // Notes:
 // void main() => runApp(MyApp());
 // OR other way to represent
