@@ -286,6 +286,7 @@ Widget btn17clientdserver(BuildContext context) {
 }
 
 Widget btn18multilanguage(BuildContext context) {
+  print("I am inside btn translate");
   return RaisedButton(
     child: Text('Translator'),
     onPressed: () {
@@ -319,6 +320,7 @@ Widget btn20socketconnection(BuildContext context) {
     },
   );
 }
+
 
 // Notes:
 // void main() => runApp(MyApp());
