@@ -8,6 +8,19 @@ MERGED from E:\app_tutorial_flutter\android\app\src\main\AndroidManifest.xml:1:1
 MERGED from [:shared_preferences] E:\app_tutorial_flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:audioplayers] E:\app_tutorial_flutter\build\audioplayers\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:path_provider] E:\app_tutorial_flutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\c23e651efc85e09aea22061edf15800e\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\e388562b6e17c74b84b3c605b6fe4164\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\84287304437b81f3ca69ad9f2e8031af\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\9f4f05011a4e6cf31f7882ac9bed0263\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\46820939d168af6706235d70433c0120\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\c2cfb1c0ea297d53d57adf88729d9467\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\bb816b404b0a98caaa3fc4ef90d8efa6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\04917e1951e701871b720cd65901b44f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\4ccbc350e4e4b0c2e2c7d3a3f23e9824\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\ad40cc24ef3e5e9b20321aa779034d46\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\5826d3c0051504b0bf59fee83e3dab27\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\ef9b85c74f847ea85da2c4750388a0b5\AndroidManifest.xml:17:1-22:12
 INJECTED from E:\app_tutorial_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from E:\app_tutorial_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from E:\app_tutorial_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -41,6 +54,12 @@ ADDED from E:\app_tutorial_flutter\android\app\src\main\AndroidManifest.xml:6:5-
 		ADDED from E:\app_tutorial_flutter\android\app\src\main\AndroidManifest.xml:6:22-65
 application
 ADDED from E:\app_tutorial_flutter\android\app\src\main\AndroidManifest.xml:13:5-36:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\5826d3c0051504b0bf59fee83e3dab27\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\5826d3c0051504b0bf59fee83e3dab27\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from E:\app_tutorial_flutter\android\app\src\main\AndroidManifest.xml:15:9-39
 	android:icon
@@ -87,6 +106,32 @@ MERGED from [:audioplayers] E:\app_tutorial_flutter\build\audioplayers\intermedi
 MERGED from [:audioplayers] E:\app_tutorial_flutter\build\audioplayers\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-44
 MERGED from [:path_provider] E:\app_tutorial_flutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] E:\app_tutorial_flutter\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\c23e651efc85e09aea22061edf15800e\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\c23e651efc85e09aea22061edf15800e\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\e388562b6e17c74b84b3c605b6fe4164\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\e388562b6e17c74b84b3c605b6fe4164\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\84287304437b81f3ca69ad9f2e8031af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\84287304437b81f3ca69ad9f2e8031af\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\9f4f05011a4e6cf31f7882ac9bed0263\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\9f4f05011a4e6cf31f7882ac9bed0263\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\46820939d168af6706235d70433c0120\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\46820939d168af6706235d70433c0120\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\4085f17c9090daac2d82b308914d6bb7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\c2cfb1c0ea297d53d57adf88729d9467\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.2.0.aar\c2cfb1c0ea297d53d57adf88729d9467\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\bb816b404b0a98caaa3fc4ef90d8efa6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\bb816b404b0a98caaa3fc4ef90d8efa6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\04917e1951e701871b720cd65901b44f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\04917e1951e701871b720cd65901b44f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\4ccbc350e4e4b0c2e2c7d3a3f23e9824\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\4ccbc350e4e4b0c2e2c7d3a3f23e9824\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\ad40cc24ef3e5e9b20321aa779034d46\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\ad40cc24ef3e5e9b20321aa779034d46\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\5826d3c0051504b0bf59fee83e3dab27\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\5826d3c0051504b0bf59fee83e3dab27\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\ef9b85c74f847ea85da2c4750388a0b5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\pd111\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\ef9b85c74f847ea85da2c4750388a0b5\AndroidManifest.xml:20:5-44
 INJECTED from E:\app_tutorial_flutter\android\app\src\debug\AndroidManifest.xml
 INJECTED from E:\app_tutorial_flutter\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
