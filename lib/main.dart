@@ -20,6 +20,7 @@ import '17_hello_client_server.dart';
 import '18_multilanguage.dart';
 import '19_DartWebSocket.dart';
 import '20_socket_connection.dart';
+import '21_barchart.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -66,6 +67,7 @@ class MyAppMain extends StatelessWidget {
         '/18multilanguage': (context) => Multilang(),
         '/19dartwebsocket': (context) => DartWebSocket(),
         '/20socketconnection': (context) => SocketScreen(),
+        '/21bargraph': (context) => BarGraph(),
       },
     ));
   }
@@ -99,6 +101,7 @@ class MainMenuScreen extends StatelessWidget {
           btn18multilanguage(context),
           btn19dartwebsocket(context),
           btn20socketconnection(context),
+          btn21bargraph(context),
         ],
       ),
     );
@@ -317,6 +320,19 @@ Widget btn20socketconnection(BuildContext context) {
       print("On pressed btn socket connection");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/20socketconnection');
+    },
+  );
+}
+
+Widget btn21bargraph(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('Bar Charts'),
+    onPressed: () {
+      print("On pressed btn bargraph");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/21bargraph');
     },
   );
 }
