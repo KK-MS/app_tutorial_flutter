@@ -22,6 +22,8 @@ import '19_DartWebSocket.dart';
 import '20_socket_connection.dart';
 import '21_barchart.dart';
 import '22_linechart.dart';
+import '23_piechart.dart';
+
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -70,6 +72,7 @@ class MyAppMain extends StatelessWidget {
         '/20socketconnection': (context) => SocketScreen(),
         '/21bargraph': (context) => BarGraph(),
         '/22linegraph': (context) => LineGraph(),
+        '/23piegraph': (context) => PieGraph(),
       },
     ));
   }
@@ -105,6 +108,7 @@ class MainMenuScreen extends StatelessWidget {
           btn20socketconnection(context),
           btn21bargraph(context),
           btn22linegraph(context),
+          btn23piegraph(context),
         ],
       ),
     );
@@ -353,7 +357,18 @@ Widget btn22linegraph(BuildContext context) {
   );
 }
 
+Widget btn23piegraph(BuildContext context) {
+  print("I am inside btn Simple text");
 
+  return RaisedButton(
+    child: Text('Pie Charts'),
+    onPressed: () {
+      print("On pressed btn pieraph");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/23piegraph');
+    },
+  );
+}
 // Notes:
 // void main() => runApp(MyApp());
 // OR other way to represent
