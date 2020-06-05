@@ -11,25 +11,28 @@ class BarGraph extends StatefulWidget {
 }
 
 class _BarGraphState extends State<BarGraph> {
-  List<charts.Series<Calculation, String>> seriesBarData;
+  List<charts.Series<LKAS, String>> seriesBarData;
 
   _generateData() async {
     final load =
         await DefaultAssetBundle.of(context).loadString("assets/data.json");
 
     var decoded = json.decode(load);
-    List<Calculation> chartdata = [];
+    List<LKAS> chartdata = [];
     for (var item in decoded) {
-      chartdata.add(Calculation.fromJson(item));
+      chartdata.add(LKAS.fromJson(item));
     }
 
     seriesBarData.add(charts.Series(
       data: chartdata,
-      //domainFn: (Calculation chartdata, _) => int.parse(chartdata.time),
-      domainFn: (Calculation chartdata, _) => chartdata.time,
-      measureFn: (Calculation chartdata, _) => int.parse(chartdata.distance),
-      // measureFn: (Calculation chartdata, _) => chartdata.distance,
+        //domainFn: (LKAS chartdata, _) => int.parse(chartdata.time),
+        domainFn: (LKAS chartdata, _) => chartdata.time,
+        measureFn: (LKAS chartdata, _) => int.parse(chartdata.distance),
+        // measureFn: (LKAS chartdata, _) => chartdata.distance,
       id: 'Performance',
+        labelAccessorFn: (LKAS chartdata, _) => '${chartdata.distance
+            .toString()}'
+
     ));
     setState(() {});
   }
@@ -37,7 +40,7 @@ class _BarGraphState extends State<BarGraph> {
   @override
   void initState() {
     super.initState();
-    seriesBarData = List<charts.Series<Calculation, String>>();
+    seriesBarData = List<charts.Series<LKAS, String>>();
     _generateData();
   }
 
@@ -63,6 +66,7 @@ class _BarGraphState extends State<BarGraph> {
                 seriesBarData,
                 animate: true,
                 animationDuration: Duration(seconds: 5),
+                barRendererDecorator: new charts.BarLabelDecorator<String>(),
                 // domainAxis: new charts.OrdinalAxisSpec(
                 //viewport: new charts.OrdinalViewport('AePS', 9),
                 // ),
@@ -90,13 +94,13 @@ class _BarGraphState extends State<BarGraph> {
   }
 }
 
-class Calculation {
+class LKAS {
   String time;
   String distance;
 
-  Calculation(this.time, this.distance);
+  LKAS(this.time, this.distance);
 
-  Calculation.fromJson(Map<String, dynamic> json) {
+  LKAS.fromJson(Map<String, dynamic> json) {
     time = json['time'];
     distance = json['distance'];
   }
