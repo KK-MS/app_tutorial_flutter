@@ -6,7 +6,6 @@ class LineGraph extends StatefulWidget {
   final Widget child;
 
   LineGraph({Key key, this.child}) : super(key: key);
-
   _LineGraphState createState() => _LineGraphState();
 }
 

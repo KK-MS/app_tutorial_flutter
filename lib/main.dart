@@ -23,6 +23,7 @@ import '20_socket_connection.dart';
 import '21_barchart.dart';
 import '22_linechart.dart';
 import '23_piechart.dart';
+import '24_barchart_3d.dart';
 
 
 // main function
@@ -73,6 +74,8 @@ class MyAppMain extends StatelessWidget {
         '/21bargraph': (context) => BarGraph(),
         '/22linegraph': (context) => LineGraph(),
         '/23piegraph': (context) => PieGraph(),
+        '/24bar3dgraph': (context) => BarGraph3D(),
+
       },
     ));
   }
@@ -109,6 +112,7 @@ class MainMenuScreen extends StatelessWidget {
           btn21bargraph(context),
           btn22linegraph(context),
           btn23piegraph(context),
+          btn24bar3dgraph(context),
         ],
       ),
     );
@@ -363,12 +367,26 @@ Widget btn23piegraph(BuildContext context) {
   return RaisedButton(
     child: Text('Pie Charts'),
     onPressed: () {
-      print("On pressed btn pieraph");
+      print("On pressed btn 3DBarGraph");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/23piegraph');
     },
   );
 }
+
+Widget btn24bar3dgraph(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('3D Bar Chart'),
+    onPressed: () {
+      print("On pressed btn 24bar3dgraph");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/24bar3dgraph');
+    },
+  );
+}
+
 // Notes:
 // void main() => runApp(MyApp());
 // OR other way to represent
