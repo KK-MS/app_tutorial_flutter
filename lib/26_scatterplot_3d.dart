@@ -12,7 +12,7 @@ final display = createDisplay(decimal: 2);
 
 // void main() => runApp(MyApp());
 
-class BarGraph3D extends StatelessWidget {
+class ScatterPlot3D extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Center(child: Text('Echarts 3D BarGraph')),
+        title: Center(child: Text('Echarts 3D ScatterPlot')),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -98,7 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Padding(
                 child: Center(
-                    child: Text('3D BarChart', style: TextStyle(fontSize: 20))),
+                    child:
+                        Text('3D ScatterPlot', style: TextStyle(fontSize: 20))),
                 padding: EdgeInsets.fromLTRB(0, 40, 0, 20),
               ),
               Container(
@@ -146,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             }
                         },
                         series: [{
-                            type: 'bar3D',
+                            type: 'scatter3D',
                             data: [[0,0,5],[0,1,1],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],
                               [0,7,0],[0,8,0],[0,9,0],[0,10,0],[0,11,2],[0,12,4],[0,13,1],
                               [0,14,1],[0,15,3],[0,16,4],[0,17,6],[0,18,4],[0,19,4],[0,20,3],
