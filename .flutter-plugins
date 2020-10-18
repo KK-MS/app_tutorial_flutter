@@ -1,5 +1,14 @@
 # This is a generated file; do not edit or check into version control.
-audioplayers=E:\\src\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\audioplayers-0.10.1\\
-path_provider=E:\\src\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-0.5.0+1\\
-shared_preferences=E:\\src\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.4+3\\
-webview_flutter=E:\\src\\flutter\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter-0.3.24\\
+audioplayers=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\audioplayers-0.16.1\\
+camera=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\camera-0.5.8+9\\
+fluttertoast=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\fluttertoast-7.1.1\\
+location=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\location-3.0.2\\
+location_web=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\location_web-1.0.0\\
+path_provider=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.6.21\\
+path_provider_linux=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-0.0.1+2\\
+path_provider_macos=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-0.0.4+4\\
+path_provider_windows=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_windows-0.0.4+1\\
+shared_preferences=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.4+3\\
+video_player=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\video_player-0.11.1+2\\
+video_player_web=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\video_player_web-0.1.4\\
+webview_flutter=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\webview_flutter-0.3.24\\

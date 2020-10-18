@@ -24,8 +24,8 @@ import '21_barchart.dart';
 import '22_linechart.dart';
 import '23_piechart.dart';
 import '24_barchart_3d.dart';
+import '25_cameraVideoCapture.dart';
 import '26_scatterplot_3d.dart';
-
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -76,8 +76,8 @@ class MyAppMain extends StatelessWidget {
         '/22linegraph': (context) => LineGraph(),
         '/23piegraph': (context) => PieGraph(),
         '/24bar3dgraph': (context) => BarGraph3D(),
+        '/25cameraVideoCapture': (context) => VideoRecorderApp(),
         '/26scatterplot': (context) => ScatterPlot3D(),
-
       },
     ));
   }
@@ -115,6 +115,7 @@ class MainMenuScreen extends StatelessWidget {
           btn22linegraph(context),
           btn23piegraph(context),
           btn24bar3dgraph(context),
+          btn25cameraVideoCapture(context),
           btn26scatterplot(context),
         ],
       ),
@@ -386,6 +387,19 @@ Widget btn24bar3dgraph(BuildContext context) {
       print("On pressed btn 24bar3dgraph");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/24bar3dgraph');
+    },
+  );
+}
+
+Widget btn25cameraVideoCapture(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('Flutter Video Camera App'),
+    onPressed: () {
+      print("On pressed btn 24bar3dgraph");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/25cameraVideoCapture');
     },
   );
 }
