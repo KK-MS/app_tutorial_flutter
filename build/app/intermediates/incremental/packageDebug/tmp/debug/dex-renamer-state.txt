@@ -1,4 +1,4 @@
-#Mon Oct 19 09:25:49 CEST 2020
+#Wed Oct 21 11:24:37 CEST 2020
 base.10=C\:\\projects\\app_tutorial_flutter\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\8
 path.31=classes.dex
 path.30=classes.dex

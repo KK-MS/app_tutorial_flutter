@@ -18,13 +18,17 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
   CameraController controller;
   // Data path to store the files. Both the video and text files//
   String videoPath;
-  String startdatapath;
-  String stopdatapath;
+  double startLat;
+  double startLong;
+  double stopLat;
+  double stopLong;
+  DateTime startTime;
+  DateTime stopTime;
 
   List<CameraDescription> cameras;
   int selectedCameraIdx;
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  //final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -50,7 +54,7 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
+      // key: _scaffoldKey,
       appBar: AppBar(
         title: const Text('Video Recorder'),
       ),
@@ -58,20 +62,21 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
         padding: EdgeInsets.all(5),
         height: double.infinity,
         width: double.infinity,
-        child: Card(
-          elevation: 50,
-          color: Colors.cyan[100],
-          child: Column(
-            children: [
-              Row(
+        color: Colors.tealAccent,
+        child: Column(
+          children: <Widget>[
+            Card(
+              elevation: 10,
+              color: Colors.amber,
+              child: Row(
                 verticalDirection: VerticalDirection.up,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 //verticalDirection: VerticalDirection.up,
                 //crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    height: 400,
-                    width: 400,
+                    height: 300,
+                    width: 300,
                     child: _cameraPreviewWidget(),
                     decoration: BoxDecoration(
                       color: Colors.black,
@@ -88,8 +93,25 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
                   _captureControlRowWidget(),
                 ],
               ),
-            ],
-          ),
+            ),
+            Card(
+              elevation: 10,
+              color: Colors.blueGrey,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text('$videoPath'),
+                    Text('$startLat'),
+                    Text('$startLong'),
+                    Text('$startTime'),
+                    Text('$stopLat'),
+                    Text('$stopLong'),
+                    Text('$stopTime'),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -260,7 +282,16 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
         selectedCameraIdx < cameras.length - 1 ? selectedCameraIdx + 1 : 0;
     CameraDescription selectedCamera = cameras[selectedCameraIdx];
 
+    CameraLensDirection view = selectedCamera.lensDirection;
+
     _onCameraSwitched(selectedCamera);
+    Fluttertoast.showToast(
+        msg: '$view triggered',
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 5,
+        backgroundColor: Colors.black,
+        textColor: Colors.white);
 
     setState(() {
       selectedCameraIdx = selectedCameraIdx;
@@ -290,6 +321,10 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
         startgpsdata.longitude,
         starttimestamp,
       ].toString();
+
+      startLat = startgpsdata.latitude;
+      startLong = startgpsdata.longitude;
+      startTime = starttimestamp;
 
       final startdirectory = await getExternalStorageDirectory();
       // For your reference print the AppDoc directory
@@ -330,6 +365,10 @@ class _VideoRecorderExampleState extends State<VideoRecorderExample> {
         stopgpsdata.longitude,
         stoptimestamp,
       ];
+
+      stopLat = stopgpsdata.latitude;
+      stopLong = stopgpsdata.longitude;
+      stopTime = stoptimestamp;
       final stopdirectory = await getExternalStorageDirectory();
       final String stopTextDirectory = '${stopdirectory.path}/StopTextFiles';
       await Directory(stopTextDirectory).create(recursive: true);

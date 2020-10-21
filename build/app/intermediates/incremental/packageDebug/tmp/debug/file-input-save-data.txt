@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Oct 19 09:25:50 CEST 2020
+#Wed Oct 21 11:24:38 CEST 2020
 60.set=DEX
 52.set=DEX
 53.base=C\:\\projects\\app_tutorial_flutter\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
