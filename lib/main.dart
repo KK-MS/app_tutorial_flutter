@@ -26,6 +26,7 @@ import '23_piechart.dart';
 import '24_barchart_3d.dart';
 import '25_cameraVideoCapture.dart';
 import '26_scatterplot_3d.dart';
+import '27_filesave.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -78,6 +79,7 @@ class MyAppMain extends StatelessWidget {
         '/24bar3dgraph': (context) => BarGraph3D(),
         '/25cameraVideoCapture': (context) => VideoRecorderApp(),
         '/26scatterplot': (context) => ScatterPlot3D(),
+        '/27filesave': (context) => FileSave(),
       },
     ));
   }
@@ -117,6 +119,7 @@ class MainMenuScreen extends StatelessWidget {
           btn24bar3dgraph(context),
           btn25cameraVideoCapture(context),
           btn26scatterplot(context),
+          btn27filesave(context),
         ],
       ),
     );
@@ -413,6 +416,19 @@ Widget btn26scatterplot(BuildContext context) {
       print("On pressed btn 26scatterplot");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/26scatterplot');
+    },
+  );
+}
+
+Widget btn27filesave(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('FileSave'),
+    onPressed: () {
+      print("On pressed btn 27filesave");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/27filesave');
     },
   );
 }
