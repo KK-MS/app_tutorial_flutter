@@ -25,7 +25,7 @@ import '22_linechart.dart';
 import '23_piechart.dart';
 import '24_barchart_3d.dart';
 import '26_scatterplot_3d.dart';
-
+import '27_flutter_echarts.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -69,7 +69,7 @@ class MyAppMain extends StatelessWidget {
         '/15websocket': (context) => WebSocket(),
         '/16server': (context) => Server(),
         '/17serverclient': (context) => ServerClient(),
-        '/18multilanguage': (context) => Multilang(),
+        // '/18multilanguage': (context) => Multilang(),
         '/19dartwebsocket': (context) => DartWebSocket(),
         '/20socketconnection': (context) => SocketScreen(),
         '/21bargraph': (context) => BarGraph(),
@@ -77,7 +77,7 @@ class MyAppMain extends StatelessWidget {
         '/23piegraph': (context) => PieGraph(),
         '/24bar3dgraph': (context) => BarGraph3D(),
         '/26scatterplot': (context) => ScatterPlot3D(),
-
+        '/27flutterecharts': (context) => FlutterEchart(),
       },
     ));
   }
@@ -108,7 +108,7 @@ class MainMenuScreen extends StatelessWidget {
           btn15Websocket(context),
           btn16helloworldserver(context),
           btn17clientdserver(context),
-          btn18multilanguage(context),
+          // btn18multilanguage(context),
           btn19dartwebsocket(context),
           btn20socketconnection(context),
           btn21bargraph(context),
@@ -116,6 +116,7 @@ class MainMenuScreen extends StatelessWidget {
           btn23piegraph(context),
           btn24bar3dgraph(context),
           btn26scatterplot(context),
+          btn27flutterecharts(context),
         ],
       ),
     );
@@ -302,17 +303,17 @@ Widget btn17clientdserver(BuildContext context) {
   );
 }
 
-Widget btn18multilanguage(BuildContext context) {
-  print("I am inside btn translate");
-  return RaisedButton(
-    child: Text('Translator'),
-    onPressed: () {
-      print("On pressed Translator btn ");
-      // Navigate to the second screen using a named route.
-      Navigator.pushNamed(context, '/18multilanguage');
-    },
-  );
-}
+// Widget btn18multilanguage(BuildContext context) {
+//   print("I am inside btn translate");
+//   return RaisedButton(
+//     child: Text('Translator'),
+//     onPressed: () {
+//       print("On pressed Translator btn ");
+//       // Navigate to the second screen using a named route.
+//       Navigator.pushNamed(context, '/18multilanguage');
+//     },
+//   );
+// }
 
 Widget btn19dartwebsocket(BuildContext context) {
   return RaisedButton(
@@ -399,6 +400,19 @@ Widget btn26scatterplot(BuildContext context) {
       print("On pressed btn 26scatterplot");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/26scatterplot');
+    },
+  );
+}
+
+Widget btn27flutterecharts(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('Flutter Echarts'),
+    onPressed: () {
+      print("On pressed btn 27flutterecharts");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/27flutterecharts');
     },
   );
 }
