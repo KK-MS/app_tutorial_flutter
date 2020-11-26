@@ -17,7 +17,7 @@ import '14_markdown_screen.dart';
 import '15_web_socket.dart';
 import '16_hello_world_server.dart';
 import '17_hello_client_server.dart';
-import '18_multilanguage.dart';
+//import '18_multilanguage.dart';
 import '19_DartWebSocket.dart';
 import '20_socket_connection.dart';
 import '21_barchart.dart';
@@ -25,7 +25,7 @@ import '22_linechart.dart';
 import '23_piechart.dart';
 import '24_barchart_3d.dart';
 import '26_scatterplot_3d.dart';
-import '27_flutter_echarts.dart';
+import '27_flutter_echarts_simple_bar.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -69,7 +69,7 @@ class MyAppMain extends StatelessWidget {
         '/15websocket': (context) => WebSocket(),
         '/16server': (context) => Server(),
         '/17serverclient': (context) => ServerClient(),
-        // '/18multilanguage': (context) => Multilang(),
+        //'/18multilanguage': (context) => Multilang(),
         '/19dartwebsocket': (context) => DartWebSocket(),
         '/20socketconnection': (context) => SocketScreen(),
         '/21bargraph': (context) => BarGraph(),
@@ -77,7 +77,7 @@ class MyAppMain extends StatelessWidget {
         '/23piegraph': (context) => PieGraph(),
         '/24bar3dgraph': (context) => BarGraph3D(),
         '/26scatterplot': (context) => ScatterPlot3D(),
-        '/27flutterecharts': (context) => FlutterEchart(),
+        '/27flutterechartssimplebar': (context) => EchartSimpleBar(),
       },
     ));
   }
@@ -116,7 +116,7 @@ class MainMenuScreen extends StatelessWidget {
           btn23piegraph(context),
           btn24bar3dgraph(context),
           btn26scatterplot(context),
-          btn27flutterecharts(context),
+          btn27flutterechartssimplebar(context),
         ],
       ),
     );
@@ -404,7 +404,7 @@ Widget btn26scatterplot(BuildContext context) {
   );
 }
 
-Widget btn27flutterecharts(BuildContext context) {
+Widget btn27flutterechartssimplebar(BuildContext context) {
   print("I am inside btn Simple text");
 
   return RaisedButton(
@@ -412,7 +412,7 @@ Widget btn27flutterecharts(BuildContext context) {
     onPressed: () {
       print("On pressed btn 27flutterecharts");
       // Navigate to the second screen using a named route.
-      Navigator.pushNamed(context, '/27flutterecharts');
+      Navigator.pushNamed(context, '/27flutterechartssimplebar');
     },
   );
 }
