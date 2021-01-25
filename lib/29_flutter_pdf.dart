@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:pdf_flutter/pdf_flutter.dart';
 
@@ -7,28 +9,52 @@ class FlutterPdf extends StatefulWidget {
 }
 
 class _FlutterPdfState extends State<FlutterPdf> {
+  File localfile;
   String url =
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-  //String url = 'http://africau.edu/images/default/sample.pdf';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      appBar: AppBar(
+        title: Text("Flutter PDF Demo"),
+      ),
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
+              color: Colors.amber,
+              child: Text('PDF from URL'),
               onPressed: () {
-                PDF.network(
-                  url,
-                  height: 500,
-                  width: 500,
+                print('URL to be loaded');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PDF.network(
+                      url,
+                      height: MediaQuery.of(context).size.height * 0.90,
+                      width: MediaQuery.of(context).size.width * 0.90,
+                    ),
+                  ),
                 );
               },
             ),
             RaisedButton(
+              color: Colors.blueAccent,
               child: Text('PDF from Assest'),
               onPressed: () {
-                print('PDF Loaded');
+                print('Asset PDF Loaded');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PDF.assets(
+                      'assets/demopdf.pdf',
+                      height: MediaQuery.of(context).size.height * 0.90,
+                      width: MediaQuery.of(context).size.width * 0.90,
+                    ),
+                  ),
+                );
               },
             ),
           ],
