@@ -27,6 +27,7 @@ import '24_barchart_3d.dart';
 import '26_scatterplot_3d.dart';
 import '27_flutter_echarts_simple_bar.dart';
 import '28_filesave.dart';
+import '29_flutter_pdf.dart';
 
 // main function
 // Start the app with the "/" named route. In this case, the app starts
@@ -80,6 +81,7 @@ class MyAppMain extends StatelessWidget {
         '/26scatterplot': (context) => ScatterPlot3D(),
         '/27flutterechartssimplebar': (context) => EchartSimpleBar(),
         '/28filesave': (context) => FileSave(),
+        '/29flutterpdf': (context) => FlutterPdf(),
       },
     ));
   }
@@ -120,6 +122,7 @@ class MainMenuScreen extends StatelessWidget {
           btn26scatterplot(context),
           btn27flutterechartssimplebar(context),
           btn28filesave(context),
+          btn29flutterpdf(context),
         ],
       ),
     );
@@ -429,6 +432,19 @@ Widget btn28filesave(BuildContext context) {
       print("On pressed btn 28filesave");
       // Navigate to the second screen using a named route.
       Navigator.pushNamed(context, '/28filesave');
+    },
+  );
+}
+
+Widget btn29flutterpdf(BuildContext context) {
+  print("I am inside btn Simple text");
+
+  return RaisedButton(
+    child: Text('PDF Demo'),
+    onPressed: () {
+      print("On pressed btn 29flutterpdf");
+      // Navigate to the second screen using a named route.
+      Navigator.pushNamed(context, '/29flutterpdf');
     },
   );
 }
