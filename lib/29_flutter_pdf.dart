@@ -33,12 +33,18 @@ class _FlutterPdfState extends State<FlutterPdf> {
                   MaterialPageRoute(
                     builder: (context) => PDF.network(
                       url,
-                      height: MediaQuery.of(context).size.height * 0.90,
-                      width: MediaQuery.of(context).size.width * 0.90,
+                      height: MediaQuery.of(context).size.height * 0.50,
+                      width: MediaQuery.of(context).size.width * 0.20,
                     ),
                   ),
                 );
               },
+            ),
+            Container(
+              child: Text(
+                'PDF is obtained from $url',
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             RaisedButton(
               color: Colors.blueAccent,
@@ -50,8 +56,8 @@ class _FlutterPdfState extends State<FlutterPdf> {
                   MaterialPageRoute(
                     builder: (context) => PDF.assets(
                       'assets/demopdf.pdf',
-                      height: MediaQuery.of(context).size.height * 0.90,
-                      width: MediaQuery.of(context).size.width * 0.90,
+                      height: MediaQuery.of(context).size.height * 0.50,
+                      width: MediaQuery.of(context).size.width * 0.30,
                     ),
                   ),
                 );
