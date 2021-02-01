@@ -24,6 +24,14 @@ class _FlutterPdfState extends State<FlutterPdf> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              child: Center(
+                child: Text(
+                  'PDF is obtained from $url',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
             RaisedButton(
               color: Colors.amber,
               child: Text('PDF from URL'),
@@ -34,20 +42,12 @@ class _FlutterPdfState extends State<FlutterPdf> {
                   MaterialPageRoute(
                     builder: (context) => PDF.network(
                       url,
-                      height: MediaQuery.of(context).size.height * 0.50,
+                      height: MediaQuery.of(context).size.height * 0.90,
                       width: MediaQuery.of(context).size.width * 0.90,
                     ),
                   ),
                 );
               },
-            ),
-            Container(
-              child: Center(
-                child: Text(
-                  'PDF is obtained from $url',
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
             ),
             RaisedButton(
               color: Colors.blueAccent,
@@ -59,7 +59,7 @@ class _FlutterPdfState extends State<FlutterPdf> {
                   MaterialPageRoute(
                     builder: (context) => PDF.assets(
                       'assets/demopdf.pdf',
-                      height: MediaQuery.of(context).size.height * 0.50,
+                      height: MediaQuery.of(context).size.height * 0.90,
                       width: MediaQuery.of(context).size.width * 0.90,
                     ),
                   ),
@@ -82,13 +82,13 @@ class _FlutterPdfState extends State<FlutterPdf> {
                     MaterialPageRoute(
                       builder: (context) => PDF.file(
                         localfile,
-                        height: MediaQuery.of(context).size.height * 0.50,
+                        height: MediaQuery.of(context).size.height * 0.90,
                         width: MediaQuery.of(context).size.width * 0.90,
                       ),
                     ),
                   );
                 });
-                print('Device function called');
+                //print('Device function called');
               },
               child: Text('PDF from file/Device Storage'),
               color: Colors.greenAccent,
