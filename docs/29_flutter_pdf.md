@@ -16,6 +16,7 @@ This PoC has 3 buttons as shown in the image
 ![pdf-homescreen](https://user-images.githubusercontent.com/56631153/106457926-fc3eb100-648f-11eb-855f-ac4e1676000f.png)
 
 From the image, it can be seen that the url is also being displayed. 
+Also, tried to open the pdf when the device (emulator) WiFi was turned off, the pdf was still able to load.
 
 ## Explanation
 The app uses two packages as mentioned above. The pdf_flutter package is used to load the pdf from url, assets and file system (Device Storage).
