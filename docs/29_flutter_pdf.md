@@ -90,19 +90,16 @@ RaisedButton(
                 if (pickedFile != null) {
                   localfile = File(pickedFile.files.single.path);
                 }
-                setState(() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PDF.file(
-                        localfile,
-                        height: MediaQuery.of(context).size.height * 0.90,
-                        width: MediaQuery.of(context).size.width * 0.90,
-                      ),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PDF.file(
+                      localfile,
+                      height: MediaQuery.of(context).size.height * 0.90,
+                      width: MediaQuery.of(context).size.width * 0.90,
                     ),
-                  );
-                });
-                //print('Device function called');
+                  ),
+                );
               },
               child: Text('PDF from file/Device Storage'),
               color: Colors.greenAccent,
