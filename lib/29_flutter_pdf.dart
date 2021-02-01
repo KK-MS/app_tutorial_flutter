@@ -42,13 +42,15 @@ class _FlutterPdfState extends State<FlutterPdf> {
               },
             ),
             Container(
-              child: Text(
-                'PDF is obtained from $url',
-                style: TextStyle(fontSize: 20),
+              child: Center(
+                child: Text(
+                  'PDF is obtained from $url',
+                  style: TextStyle(fontSize: 24),
+                ),
               ),
             ),
-            ElevatedButton(
-              // color: Colors.blueAccent,
+            RaisedButton(
+              color: Colors.blueAccent,
               child: Text('PDF from Assest'),
               onPressed: () {
                 print('Asset PDF Loaded');
@@ -65,7 +67,29 @@ class _FlutterPdfState extends State<FlutterPdf> {
               },
             ),
             RaisedButton(
-              onPressed: () {},
+              onPressed: () async {
+                FilePickerResult pickedFile =
+                    await FilePicker.platform.pickFiles(
+                  type: FileType.custom,
+                  allowedExtensions: ['pdf'],
+                );
+                if (pickedFile != null) {
+                  localfile = File(pickedFile.files.single.path);
+                }
+                setState(() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PDF.file(
+                        localfile,
+                        height: MediaQuery.of(context).size.height * 0.50,
+                        width: MediaQuery.of(context).size.width * 0.90,
+                      ),
+                    ),
+                  );
+                });
+                print('Device function called');
+              },
               child: Text('PDF from file/Device Storage'),
               color: Colors.greenAccent,
             ),
