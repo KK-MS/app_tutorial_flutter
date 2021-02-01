@@ -11,7 +11,7 @@ import '08_layouts_row_column.dart';
 import '09_list_widget.dart';
 import '10_expanded_screen.dart';
 import '11_dicee_page.dart';
-import '12_xylo_phone.dart';
+//import '12_xylo_phone.dart';
 import '13_quizzler_app.dart';
 import '14_markdown_screen.dart';
 import '15_web_socket.dart';
@@ -65,7 +65,7 @@ class MyAppMain extends StatelessWidget {
         '/09listwidget': (context) => ListWidgetScreen(),
         '/10Expanded': (context) => ExpandedWidgetScreen(),
         '/11Dicepage': (context) => DicePage(),
-        '/12xylophone': (context) => XylophoneApp(),
+        //'/12xylophone': (context) => XylophoneApp(),
         '/13quizzeler': (context) => Quizzler(),
         '/14markdown': (context) => FirstParameter(),
         '/15websocket': (context) => WebSocket(),

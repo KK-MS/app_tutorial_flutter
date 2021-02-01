@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:pdf_flutter/pdf_flutter.dart';
+import 'package:file_picker/file_picker.dart';
 
 class FlutterPdf extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _FlutterPdfState extends State<FlutterPdf> {
                     builder: (context) => PDF.network(
                       url,
                       height: MediaQuery.of(context).size.height * 0.50,
-                      width: MediaQuery.of(context).size.width * 0.20,
+                      width: MediaQuery.of(context).size.width * 0.90,
                     ),
                   ),
                 );
@@ -46,8 +47,8 @@ class _FlutterPdfState extends State<FlutterPdf> {
                 style: TextStyle(fontSize: 20),
               ),
             ),
-            RaisedButton(
-              color: Colors.blueAccent,
+            ElevatedButton(
+              // color: Colors.blueAccent,
               child: Text('PDF from Assest'),
               onPressed: () {
                 print('Asset PDF Loaded');
@@ -57,11 +58,16 @@ class _FlutterPdfState extends State<FlutterPdf> {
                     builder: (context) => PDF.assets(
                       'assets/demopdf.pdf',
                       height: MediaQuery.of(context).size.height * 0.50,
-                      width: MediaQuery.of(context).size.width * 0.30,
+                      width: MediaQuery.of(context).size.width * 0.90,
                     ),
                   ),
                 );
               },
+            ),
+            RaisedButton(
+              onPressed: () {},
+              child: Text('PDF from file/Device Storage'),
+              color: Colors.greenAccent,
             ),
           ],
         ),
