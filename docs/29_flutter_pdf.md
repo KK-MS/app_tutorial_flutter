@@ -9,9 +9,9 @@
 
 ## Description
 This PoC has 3 buttons as shown in the image
-* [PDF from URL](lib/29_flutter_pdf.dart)
-* [PDF from Asset](lib/29_flutter_pdf.dart)
-* [PDF from file/Device Storage](lib/29_flutter_pdf.dart)
+* [PDF from URL](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart)
+* [PDF from Asset](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart)
+* [PDF from file/Device Storage](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart)
 
 ![pdf-homescreen](https://user-images.githubusercontent.com/56631153/106457926-fc3eb100-648f-11eb-855f-ac4e1676000f.png)
 
@@ -22,7 +22,7 @@ The app uses two packages as mentioned above. The pdf_flutter package is used to
 The file_picker package is used to get the file from the device storage.
 
 ## Results
-* [PDF from URL](lib/29_flutter_pdf.dart):- When clicked, the pdf_flutter package loads the pdf file from the given url. The image below shows the pdf being loaded when clicked on "PDF from URL"
+* [PDF from URL](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart):- When clicked, the pdf_flutter package loads the pdf file from the given url. The image below shows the pdf being loaded when clicked on "PDF from URL"
 Here is the code snippet
 ```
 RaisedButton(
@@ -46,7 +46,7 @@ RaisedButton(
 
 ![pdf-url](https://user-images.githubusercontent.com/56631153/106458339-84bd5180-6490-11eb-898f-f529c61719d0.png)
 
-* [PDF from Asset](lib/29_flutter_pdf.dart):-  When clicked, the pdf_flutter package loads the pdf file from the asset. 
+* [PDF from Asset](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart):-  When clicked, the pdf_flutter package loads the pdf file from the asset. 
 Thus, the pdf file has to be in the assets folder of the project directory before building the application. 
 Here is the code snippet of the function being used
 ```
@@ -74,7 +74,7 @@ From the image below, it can be seen that the pdf file is present in assets fold
 
 ![asset-structure](https://user-images.githubusercontent.com/56631153/106458767-23e24900-6491-11eb-808a-66cf30c77ae4.png)
 
-* [PDF from file/Device Storage](lib/29_flutter_pdf.dart):- When clicked, the file-picker triggers the ```await FilePicker.platform.pickFiles``` function
+* [PDF from file/Device Storage](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart):- When clicked, the file-picker triggers the ```await FilePicker.platform.pickFiles``` function
 which asks for the users to select the pdf file from the file manager. Once the pdf file is selected, the pdf_flutter package loads the file in the app.
 Here is the code snippet
 ```
