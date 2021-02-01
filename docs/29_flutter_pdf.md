@@ -16,7 +16,6 @@ This PoC has 3 buttons as shown in the image
 ![pdf-homescreen](https://user-images.githubusercontent.com/56631153/106457926-fc3eb100-648f-11eb-855f-ac4e1676000f.png)
 
 From the image, it can be seen that the url is also being displayed. 
-Also, tried to open the pdf when the device (emulator) WiFi was turned off, the pdf was still able to load.
 
 ## Explanation
 The app uses two packages as mentioned above. The pdf_flutter package is used to load the pdf from url, assets and file system (Device Storage).
@@ -46,6 +45,8 @@ RaisedButton(
 ```       
 
 ![pdf-url](https://user-images.githubusercontent.com/56631153/106458339-84bd5180-6490-11eb-898f-f529c61719d0.png)
+
+Also, tried to open the pdf when the device (emulator) WiFi was turned off, the pdf was still able to load. Further testing to be done on real device.
 
 * [PDF from Asset](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart):-  When clicked, the pdf_flutter package loads the pdf file from the asset. 
 Thus, the pdf file has to be in the assets folder of the project directory before building the application. 
