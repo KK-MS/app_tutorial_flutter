@@ -12,7 +12,7 @@ import 'dark_theme_script.dart' show darkThemeScript;
 
 final display = createDisplay(decimal: 2);
 
-void main() => runApp(EchartSimpleBar());
+// void main() => runApp(EchartSimpleBar());
 
 class EchartSimpleBar extends StatelessWidget {
   @override
