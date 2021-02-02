@@ -7,8 +7,7 @@ class FlutterImagePicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Sample Imagepicker Widget',
+      title: 'Imagepicker Demo',
       home: ImagePickerWidget(),
     );
   }
@@ -43,28 +42,46 @@ class _ImagePickerWidgetState extends State {
         title: Text("Sample Imagepicker Widget"),
         backgroundColor: Colors.indigoAccent,
       ),
-      body: Column(
-        children: [
-          GestureDetector(
-            child: Container(
-              color: Colors.black12,
-              height: 300,
-              width: 300.0,
-              child:
-                  _image == null ? Text("Still waiting!") : Image.file(_image),
-            ),
-            onTap: () async {},
-          ),
-        ],
-      ),
+      body: LoadImage(image: _image),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           opencamera();
           print('camera opened');
+          var timestamp = DateTime.now();
+          print(timestamp);
         },
         label: Text('Camera'),
         icon: Icon(Icons.camera),
         backgroundColor: Colors.indigoAccent,
+      ),
+    );
+  }
+}
+
+class LoadImage extends StatelessWidget {
+  const LoadImage({
+    Key key,
+    @required File image,
+  })  : _image = image,
+        super(key: key);
+
+  final File _image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.black12,
+      height: 700,
+      width: 700,
+      child: GestureDetector(
+        onTap: () {
+          print('Gesture Detector initialized');
+        },
+        child: ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context, index) =>
+              _image == null ? Text("Still waiting!") : Image.file(_image),
+        ),
       ),
     );
   }
