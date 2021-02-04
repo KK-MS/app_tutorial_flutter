@@ -112,5 +112,4 @@ RaisedButton(
 
 Once the pdf file is selected, the app loads the pdf as shown below
 
-![pdf-device-storage](https://user-images.githubusercontent.com/56631153/106913497-55af1600-6704-11eb-9f83-6ea3abb38813.png)
-
+![pdf-device-storage-display](https://user-images.githubusercontent.com/56631153/106913662-82fbc400-6704-11eb-89a7-2aad29bde9f6.png)
