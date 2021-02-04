@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:pdf_flutter/pdf_flutter.dart';
 import 'package:file_picker/file_picker.dart';
 
+// Gloal variables declared
+String url =
+    'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+File localfile;
+
 class FlutterPdf extends StatefulWidget {
   @override
   _FlutterPdfState createState() => _FlutterPdfState();
 }
 
 class _FlutterPdfState extends State<FlutterPdf> {
-  File localfile;
-  String url =
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,11 +41,7 @@ class _FlutterPdfState extends State<FlutterPdf> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PDF.network(
-                      url,
-                      height: MediaQuery.of(context).size.height * 0.90,
-                      width: MediaQuery.of(context).size.width * 0.90,
-                    ),
+                    builder: (context) => PdfUrl(),
                   ),
                 );
               },
@@ -57,11 +54,7 @@ class _FlutterPdfState extends State<FlutterPdf> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PDF.assets(
-                      'assets/demopdf.pdf',
-                      height: MediaQuery.of(context).size.height * 0.90,
-                      width: MediaQuery.of(context).size.width * 0.90,
-                    ),
+                    builder: (context) => PdfAsset(),
                   ),
                 );
               },
@@ -79,11 +72,7 @@ class _FlutterPdfState extends State<FlutterPdf> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PDF.file(
-                      localfile,
-                      height: MediaQuery.of(context).size.height * 0.90,
-                      width: MediaQuery.of(context).size.width * 0.90,
-                    ),
+                    builder: (context) => PdfDevice(),
                   ),
                 );
               },
@@ -92,6 +81,125 @@ class _FlutterPdfState extends State<FlutterPdf> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+// Flutter PDF class to access PDF from URL and download them
+
+class PdfUrl extends StatefulWidget {
+  @override
+  _PdfUrlState createState() => _PdfUrlState();
+}
+
+class _PdfUrlState extends State<PdfUrl> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          PDF.network(
+            url,
+            height: MediaQuery.of(context).size.height * 0.80,
+            width: MediaQuery.of(context).size.width * 0.80,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              FlatButton(
+                onPressed: () {
+                  print('Button Working');
+                },
+                child: Text('Download File'),
+                color: Colors.blue,
+              ),
+              FlatButton(
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FlutterPdf(),
+                    ),
+                  );
+                },
+                child: Text('Return'),
+                color: Colors.green,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Class to access PDF from assets
+class PdfAsset extends StatefulWidget {
+  @override
+  _PdfAssetState createState() => _PdfAssetState();
+}
+
+class _PdfAssetState extends State<PdfAsset> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          PDF.assets(
+            'assets/demopdf.pdf',
+            height: MediaQuery.of(context).size.height * 0.90,
+            width: MediaQuery.of(context).size.width * 0.90,
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FlutterPdf(),
+                ),
+              );
+            },
+            child: Text('Return'),
+            color: Colors.green,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// class to load PDF from device storage
+
+class PdfDevice extends StatefulWidget {
+  @override
+  _PdfDeviceState createState() => _PdfDeviceState();
+}
+
+class _PdfDeviceState extends State<PdfDevice> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          PDF.file(
+            localfile,
+            height: MediaQuery.of(context).size.height * 0.90,
+            width: MediaQuery.of(context).size.width * 0.90,
+          ),
+          FlatButton(
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FlutterPdf(),
+                ),
+              );
+            },
+            child: Text('Return'),
+            color: Colors.green,
+          ),
+        ],
       ),
     );
   }
