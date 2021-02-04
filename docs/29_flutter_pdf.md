@@ -1,7 +1,7 @@
 # Flutter PDF app
 
 # Contents
-[Packages Used](#packages-used) | [Descripion](#descritpion) | [Explanation](#explanation) | [Results](#results) |
+[Packages Used](#packages-used) | [Description](#description) | [Explanation](#explanation) | [Results](#results) |
 
 ## Packages Used
 * [pdf_flutter](https://pub.dev/packages/pdf_flutter):- To access PDF files from URl, assets and from device storage
