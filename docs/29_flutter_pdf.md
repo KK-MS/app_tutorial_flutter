@@ -4,8 +4,9 @@
 [Packages Used](#packages-used) | [Descripion](#descritpion) | [Explanation](#explanation) | [Results](#results) |
 
 ## Packages Used
-* [pdf_flutter](https://pub.dev/packages/pdf_flutter) 
-* [file picker](https://pub.dev/packages/file_picker)
+* [pdf_flutter](https://pub.dev/packages/pdf_flutter):- To access PDF files from URl, assets and from device storage
+* [file picker](https://pub.dev/packages/file_picker):- To locate the PDF file in the device storage
+* [dio](https://pub.dev/packages/dio):- HTTP client package from Flutter China. Used to download files from the url
 
 ## Description
 This PoC has 3 buttons as shown in the image
@@ -44,9 +45,11 @@ RaisedButton(
             ),
 ```       
 
-![pdf-url](https://user-images.githubusercontent.com/56631153/106458339-84bd5180-6490-11eb-898f-f529c61719d0.png)
+![pdf-url](https://user-images.githubusercontent.com/56631153/106913321-2ac4c200-6704-11eb-9082-12ee0add4df9.png)
 
-Also, tried to open the pdf when the device (emulator) WiFi was turned off, the pdf was still able to load. Further testing to be done on real device.
+Once opened, the pdf file can be downloaded which is as shown below
+
+![pdf-url-download](https://user-images.githubusercontent.com/56631153/106913384-39ab7480-6704-11eb-8613-925333ccdf4b.png)
 
 * [PDF from Asset](https://github.com/KK-MS/app_tutorial_flutter/blob/master/lib/29_flutter_pdf.dart):-  When clicked, the pdf_flutter package loads the pdf file from the asset. 
 Thus, the pdf file has to be in the assets folder of the project directory before building the application. 
@@ -70,7 +73,7 @@ RaisedButton(
               },
             ),
 ```
-![pdf-asset](https://user-images.githubusercontent.com/56631153/106458675-057c4d80-6491-11eb-8f70-503fee6d85bd.png)
+![pdf-asset](https://user-images.githubusercontent.com/56631153/106913435-462fcd00-6704-11eb-965d-cf637728b3ac.png)
 
 From the image below, it can be seen that the pdf file is present in assets folder. The file name is ```demopdf.pdf``` and it is highlighted in green color in the image below
 
@@ -109,5 +112,5 @@ RaisedButton(
 
 Once the pdf file is selected, the app loads the pdf as shown below
 
+![pdf-device-storage](https://user-images.githubusercontent.com/56631153/106913497-55af1600-6704-11eb-9f83-6ea3abb38813.png)
 
-![pdf-device-storage-display](https://user-images.githubusercontent.com/56631153/106459439-24c7aa80-6492-11eb-9412-794aeda32f23.png)
