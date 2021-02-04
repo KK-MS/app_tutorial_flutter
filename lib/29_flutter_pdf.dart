@@ -1,13 +1,17 @@
 import 'dart:io';
-
+import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:pdf_flutter/pdf_flutter.dart';
 import 'package:file_picker/file_picker.dart';
 
 // Gloal variables declared
-String url =
-    'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+final String url =
+    "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
 File localfile;
+var progressString = "";
 
 class FlutterPdf extends StatefulWidget {
   @override
@@ -94,6 +98,36 @@ class PdfUrl extends StatefulWidget {
 }
 
 class _PdfUrlState extends State<PdfUrl> {
+  bool downloading = false;
+  Future<void> downloadPdf() async {
+    Dio dio = Dio();
+
+    try {
+      var dir = await getExternalStorageDirectory();
+      String path = dir.path;
+      String fileName = "$path/terms&conditons.pdf";
+      await dio.download(
+        url,
+        fileName,
+        onReceiveProgress: (count, total) {
+          print("Received = $count, Total = $total");
+
+          setState(() {
+            downloading = true;
+            progressString = ((count / total) * 100).toStringAsFixed(0) + "%";
+          });
+        },
+      );
+    } catch (e) {
+      print(e);
+    }
+    setState(() {
+      downloading = false;
+      progressString = "Completed";
+    });
+    print("Download Completed");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -109,9 +143,10 @@ class _PdfUrlState extends State<PdfUrl> {
             children: [
               FlatButton(
                 onPressed: () {
+                  downloadPdf();
                   print('Button Working');
                 },
-                child: Text('Download File'),
+                child: Text('Download File:  $progressString"'),
                 color: Colors.blue,
               ),
               FlatButton(

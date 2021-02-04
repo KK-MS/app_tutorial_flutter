@@ -39,7 +39,7 @@ class _ImagePickerWidgetState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sample Imagepicker Widget"),
+        title: Text("Imagepicker Demo"),
         backgroundColor: Colors.indigoAccent,
       ),
       body: LoadImage(image: _image),
@@ -78,7 +78,7 @@ class LoadImage extends StatelessWidget {
           print('Gesture Detector initialized');
         },
         child: ListView.builder(
-          itemCount: 5,
+          itemCount: 1,
           itemBuilder: (context, index) =>
               _image == null ? Text("Still waiting!") : Image.file(_image),
         ),
