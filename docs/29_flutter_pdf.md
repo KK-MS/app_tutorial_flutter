@@ -6,7 +6,8 @@
 ## Packages Used
 * [pdf_flutter](https://pub.dev/packages/pdf_flutter):- To access PDF files from URl, assets and from device storage
 * [file picker](https://pub.dev/packages/file_picker):- To locate the PDF file in the device storage
-* [dio](https://pub.dev/packages/dio):- HTTP client package from Flutter China. Used to download files from the url
+* [dio](https://pub.dev/packages/dio):- HTTP client package from Flutter China.
+* [flutter_downloader](https://pub.dev/packages/flutter_downloader):- Package to download files from url.
 
 ## Description
 This PoC has 3 buttons as shown in the image
