@@ -82,6 +82,7 @@ class MyAppMain extends StatelessWidget {
         '/26scatterplot': (context) => ScatterPlot3D(),
         '/27flutterechartssimplebar': (context) => EchartSimpleBar(),
         '/28filesave': (context) => FileSave(),
+        //'/29flutterpdf': (context) => AdvancePDFViewer(),// FlutterPdf(),
         '/29flutterpdf': (context) => FlutterPdf(),
         '/30flutterimagepicker': (context) => FlutterImagePicker(),
       },
